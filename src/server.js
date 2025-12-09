@@ -5,6 +5,14 @@ require("dotenv").config();
 const app = express();
 app.use(cors()); // <--- VERY IMPORTANT
 app.use(express.json());
+// put this before app.listen(...) in src/server.js
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully 🚀");
+});
+// put this before app.listen(...) in src/server.js
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully 🚀");
+});
 
 // all routes below
 const authRoutes = require("./routes/auth");
